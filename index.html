@@ -3,60 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Anniversary Countdown</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f9;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    #countdown, #slider, #message {
-      margin: 20px 0;
-    }
-
-    #message {
-      display: none;
-      font-size: 1.5rem;
-      color: #333;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .slider {
-      max-width: 80%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .slider img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
 </head>
 <body>
   <!-- Countdown Section -->
@@ -90,59 +38,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script>
-    const countdownSection = document.getElementById('countdown-section');
-    const afterSection = document.getElementById('after-section');
-    const countdownDisplay = document.getElementById('countdown');
-    const countdownMusic = document.getElementById('countdown-music');
-    const celebrationMusic = document.getElementById('celebration-music');
-    const confettiCanvas = document.getElementById('confetti-canvas');
-
-    // Set target date
-    const targetDate = new Date().getTime() + 5 * 1000; // 5 seconds for demo
-
-    // Start countdown music
-    countdownMusic.play();
-
-    // Countdown logic
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance <= 0) {
-        clearInterval(timer);
-        startCelebration();
-      } else {
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        countdownDisplay.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-      }
-    }, 1000);
-
-    // After countdown logic
-    function startCelebration() {
-      countdownSection.classList.add('hidden');
-      afterSection.classList.remove('hidden');
-
-      // Stop countdown music and start celebration music
-      countdownMusic.pause();
-      celebrationMusic.play();
-
-      // Start confetti
-      confettiCanvas.width = window.innerWidth;
-      confettiCanvas.height = window.innerHeight;
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 }
-      });
-    }
-
-    // Reveal message
-    function revealMessage() {
-      document.getElementById('message').style.display = 'block';
-    }
+    // cuuu
   </script>
 </body>
 </html>
