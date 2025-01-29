@@ -4,41 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Anniversary Countdown</title>
+  <title>E & H</title>
+  <link rel="icon" href="assets/images/heart.ico" type="image/x-icon">
 </head>
 <body>
   <!-- Countdown Section -->
   <div id="countdown-section">
-    <h1>Countdown to Our Special Day!</h1>
+    <h1>Our Special Day!</h1>
     <div id="countdown">00:00:00</div>
-    <p id="warm-message">"Time flies when you're surrounded by love. Here's to our cherished memories and those to come."</p>
+    <p id="warm-message">"I can't believe it is a year now love"</p>
   </div>
 
   <!-- After Countdown Section -->
   <div id="after-section" class="hidden">
     <canvas id="confetti-canvas"></canvas>
-    <div id="slider" class="slider">
-      <img src="https://via.placeholder.com/800x400?text=Happy+Anniversary+1" alt="Slide 1">
-      <img src="https://via.placeholder.com/800x400?text=Happy+Anniversary+2" alt="Slide 2">
-      <img src="https://via.placeholder.com/800x400?text=Happy+Anniversary+3" alt="Slide 3">
-    </div>
-    <button onclick="revealMessage()">Click to Reveal a Message</button>
-    <div id="message">"Happy Anniversary! Here's to many more years of love and happiness."</div>
+    <div id="slider" class="slider"></div>
+    <button onclick="revealMessage()">Message</button>
   </div>
 
-  <audio id="countdown-music" loop>
-    <source src="countdown-music.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <span class="close-button" onclick="closePopup()">&times;</span>
+      <p>Happy Anniversary!</p>
+      <p>Here's to many more</p>
+      <p>I Love You More Than I can Say</p>
+    </div>
+  </div>
 
-  <audio id="celebration-music" loop class="hidden">
-    <source src="celebration-music.mp3" type="audio/mp3">
+  <!-- <audio id="countdown-music" loop muted>
+    <source src="/assets/audio/nairobi.mp3" type="audio/mp3">
     Your browser does not support the audio element.
-  </audio>
+  </audio> -->
+
+  <!-- <audio id="celebration-music" loop muted class="hidden">
+    <source src="/assets/audio/sheba.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio> -->
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script>
-    // cuuu
-  </script>
+  <script src="script.jsx"></script>
 </body>
 </html>
